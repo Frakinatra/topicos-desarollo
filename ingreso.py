@@ -24,9 +24,9 @@ class LoginApp(QtWidgets.QMainWindow):
             return None
 
     def validar_login(self):
-        username = self.textEdit.toPlainText().strip()
-        password = self.textEdit_2.toPlainText().strip()
-
+        username = self.lineEdit.text().strip()   # Obtener el texto del QLineEdit
+        password = self.lineEdit_2.text().strip()  # Obtener el texto del QLineEdit
+        
         conexion = self.conectar()
         if conexion:
             try:
@@ -57,7 +57,7 @@ class LoginApp(QtWidgets.QMainWindow):
 class InicioApp(QtWidgets.QMainWindow):
     def __init__(self):
         super().__init__()
-        uic.loadUi('inicio.ui', self)  
+        uic.loadUi('inicio.ui', self)  # Cargar la interfaz principal de la app
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)

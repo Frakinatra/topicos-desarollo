@@ -6,10 +6,9 @@ from PyQt5.QtWidgets import QMessageBox
 class LoginApp(QtWidgets.QMainWindow):
     def __init__(self):
         super().__init__()
-        uic.loadUi('proyecto.ui', self)  # Cargar la interfaz principal
-        
-        # Conectar el botón de iniciar sesión con la función
-        self.pushButton.clicked.connect(self.validar_login)  # Botón "Iniciar sesión"
+        uic.loadUi('proyecto.ui', self) 
+       
+        self.pushButton.clicked.connect(self.validar_login)  
 
     def conectar(self):
         try:
@@ -38,7 +37,7 @@ class LoginApp(QtWidgets.QMainWindow):
 
                 if user:
                     QMessageBox.information(self, "Éxito", f"¡Bienvenido, {username}!")
-                    self.abrir_inicio()  # Llamar a la función que abre la ventana principal de la app
+                    self.abrir_inicio()  
                 else:
                     QMessageBox.warning(self, "Error", "Usuario o contraseña incorrectos.")
             except mysql.connector.Error as err:
@@ -48,17 +47,17 @@ class LoginApp(QtWidgets.QMainWindow):
                 conexion.close()
 
     def abrir_inicio(self):
-        # Crear una instancia de la ventana principal de la app
+        
         self.ventana_inicio = InicioApp()  
-        # Mostrar la ventana principal de la app
+        
         self.ventana_inicio.show()
-        # Cerrar la ventana de login
+        
         self.close()
 
 class InicioApp(QtWidgets.QMainWindow):
     def __init__(self):
         super().__init__()
-        uic.loadUi('inicio.ui', self)  # Cargar la interfaz principal de la app
+        uic.loadUi('inicio.ui', self)  
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)

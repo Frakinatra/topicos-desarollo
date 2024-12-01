@@ -1,0 +1,101 @@
+<ui version="4.0">
+ <class>ConsultarEditarEliminarProductosWindow</class>
+ <widget class="QWidget" name="ConsultarEditarEliminarProductosWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Consultar/Editar/Eliminar Productos</string>
+  </property>
+
+  <!-- Lista Desplegable de Proveedores -->
+  <widget class="QLabel" name="labelProveedor">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>30</y>
+     <width>100</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Proveedor:</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBoxProveedor">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>30</y>
+     <width>500</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <!-- Aquí se llenarán dinámicamente los proveedores desde la base de datos -->
+  </widget>
+
+  <!-- Tabla de Productos -->
+  <widget class="QTableWidget" name="tableWidgetProductos">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>80</y>
+     <width>700</width>
+     <height>400</height>
+    </rect>
+   </property>
+   <column>
+    <property name="text">
+     <string>Nombre Producto</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Descripción</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Talla</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Precio</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Fecha Salida</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Acciones</string>
+    </property>
+   </column>
+  </widget>
+
+  <!-- Botones Editar y Eliminar (Se agregarán a la tabla dinámicamente) -->
+  <widget class="QPushButton" name="btnActualizarTabla">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>500</y>
+     <width>200</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Actualizar Tabla</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AgregarProductoWindow</class>
+ <widget class="QWidget" name="AgregarProductoWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Agregar Producto</string>
+  </property>
+  <widget class="QComboBox" name="comboBoxProveedor">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>50</y>
+     <width>200</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>Selecciona un proveedor</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEditNombreProducto">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>100</y>
+     <width>200</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>Nombre del producto</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEditDescripcionProducto">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>150</y>
+     <width>200</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>Descripción del producto</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEditPrecioProducto">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>200</y>
+     <width>200</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>Precio del producto</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnGuardarProducto">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>250</y>
+     <width>100</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Guardar</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

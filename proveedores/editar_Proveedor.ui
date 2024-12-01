@@ -1,0 +1,241 @@
+<ui version="4.0">
+ <class>EditarProveedorWindow</class>
+ <widget class="QWidget" name="EditarProveedorWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Editar Proveedor</string>
+  </property>
+  <!-- Campo: ID del Proveedor (solo lectura) -->
+  <widget class="QLabel" name="labelId">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>30</y>
+     <width>100</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>ID del Proveedor:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEditId">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>30</y>
+     <width>500</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>Ejemplo: 1</string>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <!-- Campo: Nombre del Proveedor -->
+  <widget class="QLabel" name="labelNombre">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>80</y>
+     <width>100</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Nombre:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEditNombre">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>80</y>
+     <width>500</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>E.g., Nike</string>
+   </property>
+  </widget>
+  <!-- Campo: Vinculación -->
+  <widget class="QLabel" name="labelVinculacion">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>130</y>
+     <width>100</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Vinculación:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEditVinculacion">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>130</y>
+     <width>500</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>E.g., Ventas</string>
+   </property>
+  </widget>
+  <!-- Campo: Correo -->
+  <widget class="QLabel" name="labelCorreo">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>180</y>
+     <width>100</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Correo:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEditCorreo">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>180</y>
+     <width>500</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>E.g., nike@correo.com</string>
+   </property>
+  </widget>
+  <!-- Campo: Teléfono -->
+  <widget class="QLabel" name="labelTelefono">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>230</y>
+     <width>100</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Teléfono:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEditTelefono">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>230</y>
+     <width>500</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>E.g., 1234567890</string>
+   </property>
+  </widget>
+  <!-- Campo: Dirección -->
+  <widget class="QLabel" name="labelDireccion">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>280</y>
+     <width>100</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Dirección:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEditDireccion">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>280</y>
+     <width>500</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>E.g., Av. Principal 123, CDMX, México</string>
+   </property>
+  </widget>
+  <!-- Campo: Fecha de Registro -->
+  <widget class="QLabel" name="labelFechaRegistro">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>330</y>
+     <width>100</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Fecha:</string>
+   </property>
+  </widget>
+  <widget class="QDateEdit" name="dateEditFechaRegistro">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>330</y>
+     <width>500</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="calendarPopup">
+    <bool>true</bool>
+   </property>
+   <property name="displayFormat">
+    <string>yyyy-MM-dd</string>
+   </property>
+  </widget>
+  <!-- Botón: Guardar Cambios -->
+  <widget class="QPushButton" name="btnGuardarCambios">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>400</y>
+     <width>200</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Guardar Cambios</string>
+   </property>
+  </widget>
+  <!-- Botón: Cancelar -->
+  <widget class="QPushButton" name="btnCancelar">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>400</y>
+     <width>200</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Cancelar</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

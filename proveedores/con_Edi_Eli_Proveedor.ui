@@ -1,0 +1,80 @@
+<ui version="4.0">
+ <class>ConsultarEditarEliminarProveedoresWindow</class>
+ <widget class="QWidget" name="ConsultarEditarEliminarProveedoresWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Consultar/Editar/Eliminar Proveedores</string>
+  </property>
+
+  <!-- Tabla de Proveedores -->
+  <widget class="QTableWidget" name="tableWidgetProveedores">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>30</y>
+     <width>700</width>
+     <height>400</height>
+    </rect>
+   </property>
+   <column>
+    <property name="text">
+     <string>Nombre</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Vinculación</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Correo</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Teléfono</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Dirección</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Fecha Registro</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Acciones</string>
+    </property>
+   </column>
+  </widget>
+
+  <!-- Botón para actualizar tabla -->
+  <widget class="QPushButton" name="btnActualizarTabla">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>500</y>
+     <width>200</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Actualizar Tabla</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

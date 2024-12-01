@@ -1,0 +1,70 @@
+<ui version="4.0">
+ <class>ProveedorMainWindow</class>
+ <widget class="QWidget" name="ProveedorMainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Módulo de Proveedores</string>
+  </property>
+  <widget class="QPushButton" name="btnAgregarProveedor">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>150</y>
+     <width>500</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Agregar Proveedor</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnGestionarProveedores">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>230</y>
+     <width>500</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Consultar/Editar/Eliminar Proveedores</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnAgregarProducto">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>310</y>
+     <width>500</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Agregar Producto a un Proveedor</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnGestionarProductos">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>390</y>
+     <width>500</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Consultar/Editar/Eliminar Productos</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

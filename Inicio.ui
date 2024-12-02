@@ -70,14 +70,14 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">QPushButton{
-    font:75 8pt &quot;MS Shell Dlg 2&quot;;
-    background-color: rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+    background-color: rgba(80, 80, 80, 200);  /* Gris semi-transparente */
+    color: white;
+    border-radius: 10px;
+    font: bold 10pt &quot;Arial&quot;;
 }
-
-QPushButton:hover{
-    font:75 9pt &quot;MS Shell Dlg 2&quot;;
-    background-color: rgb(227, 227, 227);
+QPushButton:hover {
+    background-color: rgba(100, 100, 100, 200);
 }
 
 </string>
@@ -115,15 +115,17 @@ QPushButton:hover{
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">QPushButton{
-    font:75 8pt &quot;MS Shell Dlg 2&quot;;
-    background-color: rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+    background-color: rgba(80, 80, 80, 200);  /* Gris semi-transparente */
+    color: white;
+    border-radius: 10px;
+    font: bold 10pt &quot;Arial&quot;;
+}
+QPushButton:hover {
+    background-color: rgba(100, 100, 100, 200);
 }
 
-QPushButton:hover{
-    font:75 9pt &quot;MS Shell Dlg 2&quot;;
-    background-color: rgb(227, 227, 227);
-}
+
 
 </string>
    </property>
@@ -141,15 +143,16 @@ QPushButton:hover{
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">QPushButton{
-    font:75 8pt &quot;MS Shell Dlg 2&quot;;
-    background-color: rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+    background-color: rgba(80, 80, 80, 200);  /* Gris semi-transparente */
+    color: white;
+    border-radius: 10px;
+    font: bold 10pt &quot;Arial&quot;;
+}
+QPushButton:hover {
+    background-color: rgba(100, 100, 100, 200);
 }
 
-QPushButton:hover{
-    font:75 9pt &quot;MS Shell Dlg 2&quot;;
-    background-color: rgb(227, 227, 227);
-}
 
 </string>
    </property>

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>AgregarProveedorWindow</class>
  <widget class="QWidget" name="AgregarProveedorWindow">
@@ -12,7 +13,6 @@
   <property name="windowTitle">
    <string>Agregar Proveedor</string>
   </property>
-  <!-- Campo: Nombre del Proveedor -->
   <widget class="QLabel" name="labelNombre">
    <property name="geometry">
     <rect>
@@ -39,7 +39,6 @@
     <string>E.g., Nike</string>
    </property>
   </widget>
-  <!-- Campo: Vinculación -->
   <widget class="QLabel" name="labelVinculacion">
    <property name="geometry">
     <rect>
@@ -66,7 +65,6 @@
     <string>E.g., Ventas</string>
    </property>
   </widget>
-  <!-- Campo: Correo -->
   <widget class="QLabel" name="labelCorreo">
    <property name="geometry">
     <rect>
@@ -93,7 +91,6 @@
     <string>E.g., nike@correo.com</string>
    </property>
   </widget>
-  <!-- Campo: Teléfono -->
   <widget class="QLabel" name="labelTelefono">
    <property name="geometry">
     <rect>
@@ -117,10 +114,9 @@
     </rect>
    </property>
    <property name="placeholderText">
-    <string>E.g., 1234567890</string>
+    <string>E.g., 7293617331</string>
    </property>
   </widget>
-  <!-- Campo: Dirección -->
   <widget class="QLabel" name="labelDireccion">
    <property name="geometry">
     <rect>
@@ -147,42 +143,11 @@
     <string>E.g., Av. Principal 123, CDMX, México</string>
    </property>
   </widget>
-  <!-- Campo: Fecha de Registro -->
-  <widget class="QLabel" name="labelFechaRegistro">
-   <property name="geometry">
-    <rect>
-     <x>50</x>
-     <y>280</y>
-     <width>100</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Fecha:</string>
-   </property>
-  </widget>
-  <widget class="QDateEdit" name="dateEditFechaRegistro">
-   <property name="geometry">
-    <rect>
-     <x>150</x>
-     <y>280</y>
-     <width>500</width>
-     <height>30</height>
-    </rect>
-   </property>
-   <property name="calendarPopup">
-    <bool>true</bool>
-   </property>
-   <property name="displayFormat">
-    <string>yyyy-MM-dd</string>
-   </property>
-  </widget>
-  <!-- Botón: Guardar -->
   <widget class="QPushButton" name="btnGuardar">
    <property name="geometry">
     <rect>
      <x>150</x>
-     <y>350</y>
+     <y>300</y>
      <width>200</width>
      <height>50</height>
     </rect>
@@ -191,12 +156,11 @@
     <string>Guardar</string>
    </property>
   </widget>
-  <!-- Botón: Cancelar -->
   <widget class="QPushButton" name="btnCancelar">
    <property name="geometry">
     <rect>
      <x>450</x>
-     <y>350</y>
+     <y>300</y>
      <width>200</width>
      <height>50</height>
     </rect>

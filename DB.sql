@@ -40,10 +40,10 @@ COMMIT;
 -- Tabla de proveedores
 CREATE TABLE proveedores (
     id INT NOT NULL AUTO_INCREMENT,
-    nombre VARCHAR(100) NOT NULL,  -- Nombre del proveedor
+    nombre VARCHAR(100) NOT NULL UNIQUE,  -- Nombre del proveedor
     vinculacion VARCHAR(150) NOT NULL,  -- Contacto o área de vinculación
     correo VARCHAR(100) NOT NULL UNIQUE,  -- Correo del proveedor
-    telefono VARCHAR(15) NOT NULL,  -- Teléfono del proveedor
+    telefono VARCHAR(15) NOT NULL UNIQUE,  -- Teléfono del proveedor
     direccion VARCHAR(255) NOT NULL,  -- Dirección del proveedor
     fecha_registro DATE NOT NULL,  -- Fecha de registro del proveedor
     PRIMARY KEY (id)

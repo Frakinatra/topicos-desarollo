@@ -80,7 +80,7 @@ class AgregarProductoWindow(QMainWindow):
         if not self.lineEditNombreProducto.text().strip():
             QMessageBox.warning(self, "Campo vacío", "El campo Nombre del Producto no puede estar vacío.")
             return False
-        if not self.lineEditDescripcionProducto.text().strip():
+        if not self.textEditDescripcion.toPlainText().strip():  # Aquí se cambia el nombre del objeto
             QMessageBox.warning(self, "Campo vacío", "El campo Descripción no puede estar vacío.")
             return False
         if self.doubleSpinBoxPrecioProducto.value() == 0:
@@ -110,7 +110,7 @@ class AgregarProductoWindow(QMainWindow):
 
         # Obtener los datos de los campos
         nombre_producto = self.lineEditNombreProducto.text().strip()
-        descripcion_producto = self.lineEditDescripcionProducto.text().strip()
+        descripcion_producto = self.textEditDescripcion.toPlainText().strip()  # Aquí se cambia el nombre del objeto
         proveedor_id = self.comboBoxProveedor.currentData()  # Obtener el ID del proveedor
         categoria_id = self.comboBoxCategoria.currentData()  # Obtener el ID de la categoría
         talla = self.lineEditTallaProducto.text().strip()

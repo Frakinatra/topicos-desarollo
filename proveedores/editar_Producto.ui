@@ -1,6 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>AgregarProductoWindow</class>
- <widget class="QWidget" name="AgregarProductoWindow">
+ <class>EditarProductoWindow</class>
+ <widget class="QWidget" name="EditarProductoWindow">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -10,10 +11,8 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Agregar Producto</string>
+   <string>Editar Producto</string>
   </property>
-
-  <!-- Campo: ID del Producto (Solo Lectura) -->
   <widget class="QLabel" name="labelIDProducto">
    <property name="geometry">
     <rect>
@@ -43,8 +42,6 @@
     <string>ID generado automáticamente</string>
    </property>
   </widget>
-
-  <!-- Campo: Proveedor (Lista Desplegable - Solo Lectura) -->
   <widget class="QLabel" name="labelProveedor">
    <property name="geometry">
     <rect>
@@ -68,13 +65,9 @@
     </rect>
    </property>
    <property name="editable">
-    <bool>false</bool> <!-- Hace que el QComboBox sea solo lectura -->
+    <bool>false</bool>
    </property>
-   <!-- Aquí iría el llenado dinámico de la lista de proveedores -->
-   <!-- Los valores deberían ser el ID del proveedor y el texto el nombre del proveedor -->
   </widget>
-
-  <!-- Campo: Nombre del Producto -->
   <widget class="QLabel" name="labelNombreProducto">
    <property name="geometry">
     <rect>
@@ -101,8 +94,6 @@
     <string>Ejemplo: Air Max, Ultraboost</string>
    </property>
   </widget>
-
-  <!-- Campo: Descripción del Producto -->
   <widget class="QLabel" name="labelDescripcion">
    <property name="geometry">
     <rect>
@@ -129,8 +120,6 @@
     <string>Descripción del producto...</string>
    </property>
   </widget>
-
-  <!-- Campo: Talla Disponible -->
   <widget class="QLabel" name="labelTalla">
    <property name="geometry">
     <rect>
@@ -157,8 +146,6 @@
     <string>Ejemplo: 25, 26, 27, 28</string>
    </property>
   </widget>
-
-  <!-- Campo: Precio por Unidad -->
   <widget class="QLabel" name="labelPrecio">
    <property name="geometry">
     <rect>
@@ -185,8 +172,6 @@
     <string>Ejemplo: 1500.00</string>
    </property>
   </widget>
-
-  <!-- Campo: Categoría (Lista Desplegable) -->
   <widget class="QLabel" name="labelCategoria">
    <property name="geometry">
     <rect>
@@ -209,11 +194,7 @@
      <height>30</height>
     </rect>
    </property>
-   <!-- Aquí iría el llenado dinámico de la lista de categorías -->
-   <!-- Los valores deberían ser el ID de la categoría y el texto el nombre de la categoría -->
   </widget>
-
-  <!-- Campo: Fecha de Salida -->
   <widget class="QLabel" name="labelFechaSalida">
    <property name="geometry">
     <rect>
@@ -236,15 +217,33 @@
      <height>30</height>
     </rect>
    </property>
-   <property name="calendarPopup">
-    <bool>true</bool>
+   <property name="dateTime">
+    <datetime>
+     <hour>6</hour>
+     <minute>0</minute>
+     <second>0</second>
+     <year>2024</year>
+     <month>12</month>
+     <day>14</day>
+    </datetime>
+   </property>
+   <property name="minimumDateTime">
+    <datetime>
+     <hour>6</hour>
+     <minute>0</minute>
+     <second>0</second>
+     <year>2024</year>
+     <month>12</month>
+     <day>2</day>
+    </datetime>
    </property>
    <property name="displayFormat">
     <string>yyyy-MM-dd</string>
    </property>
+   <property name="calendarPopup">
+    <bool>true</bool>
+   </property>
   </widget>
-
-  <!-- Botón: Guardar -->
   <widget class="QPushButton" name="btnGuardar">
    <property name="geometry">
     <rect>
@@ -258,8 +257,6 @@
     <string>Guardar</string>
    </property>
   </widget>
-
-  <!-- Botón: Cancelar -->
   <widget class="QPushButton" name="btnCancelar">
    <property name="geometry">
     <rect>

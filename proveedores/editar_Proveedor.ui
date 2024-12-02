@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>EditarProveedorWindow</class>
  <widget class="QWidget" name="EditarProveedorWindow">
@@ -12,7 +13,6 @@
   <property name="windowTitle">
    <string>Editar Proveedor</string>
   </property>
-  <!-- Campo: ID del Proveedor (solo lectura) -->
   <widget class="QLabel" name="labelId">
    <property name="geometry">
     <rect>
@@ -29,20 +29,19 @@
   <widget class="QLineEdit" name="lineEditId">
    <property name="geometry">
     <rect>
-     <x>150</x>
+     <x>160</x>
      <y>30</y>
      <width>500</width>
      <height>30</height>
     </rect>
    </property>
-   <property name="placeholderText">
-    <string>Ejemplo: 1</string>
-   </property>
    <property name="readOnly">
     <bool>true</bool>
    </property>
+   <property name="placeholderText">
+    <string>Ejemplo: 1</string>
+   </property>
   </widget>
-  <!-- Campo: Nombre del Proveedor -->
   <widget class="QLabel" name="labelNombre">
    <property name="geometry">
     <rect>
@@ -59,7 +58,7 @@
   <widget class="QLineEdit" name="lineEditNombre">
    <property name="geometry">
     <rect>
-     <x>150</x>
+     <x>160</x>
      <y>80</y>
      <width>500</width>
      <height>30</height>
@@ -69,7 +68,6 @@
     <string>E.g., Nike</string>
    </property>
   </widget>
-  <!-- Campo: Vinculación -->
   <widget class="QLabel" name="labelVinculacion">
    <property name="geometry">
     <rect>
@@ -86,7 +84,7 @@
   <widget class="QLineEdit" name="lineEditVinculacion">
    <property name="geometry">
     <rect>
-     <x>150</x>
+     <x>160</x>
      <y>130</y>
      <width>500</width>
      <height>30</height>
@@ -96,7 +94,6 @@
     <string>E.g., Ventas</string>
    </property>
   </widget>
-  <!-- Campo: Correo -->
   <widget class="QLabel" name="labelCorreo">
    <property name="geometry">
     <rect>
@@ -113,7 +110,7 @@
   <widget class="QLineEdit" name="lineEditCorreo">
    <property name="geometry">
     <rect>
-     <x>150</x>
+     <x>160</x>
      <y>180</y>
      <width>500</width>
      <height>30</height>
@@ -123,7 +120,6 @@
     <string>E.g., nike@correo.com</string>
    </property>
   </widget>
-  <!-- Campo: Teléfono -->
   <widget class="QLabel" name="labelTelefono">
    <property name="geometry">
     <rect>
@@ -140,7 +136,7 @@
   <widget class="QLineEdit" name="lineEditTelefono">
    <property name="geometry">
     <rect>
-     <x>150</x>
+     <x>160</x>
      <y>230</y>
      <width>500</width>
      <height>30</height>
@@ -150,7 +146,6 @@
     <string>E.g., 1234567890</string>
    </property>
   </widget>
-  <!-- Campo: Dirección -->
   <widget class="QLabel" name="labelDireccion">
    <property name="geometry">
     <rect>
@@ -167,7 +162,7 @@
   <widget class="QLineEdit" name="lineEditDireccion">
    <property name="geometry">
     <rect>
-     <x>150</x>
+     <x>160</x>
      <y>280</y>
      <width>500</width>
      <height>30</height>
@@ -177,7 +172,6 @@
     <string>E.g., Av. Principal 123, CDMX, México</string>
    </property>
   </widget>
-  <!-- Campo: Fecha de Registro -->
   <widget class="QLabel" name="labelFechaRegistro">
    <property name="geometry">
     <rect>
@@ -188,26 +182,45 @@
     </rect>
    </property>
    <property name="text">
-    <string>Fecha:</string>
+    <string>Fecha de Registro:</string>
    </property>
   </widget>
   <widget class="QDateEdit" name="dateEditFechaRegistro">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="geometry">
     <rect>
-     <x>150</x>
+     <x>160</x>
      <y>330</y>
      <width>500</width>
      <height>30</height>
     </rect>
    </property>
-   <property name="calendarPopup">
-    <bool>true</bool>
+   <property name="dateTime">
+    <datetime>
+     <hour>0</hour>
+     <minute>0</minute>
+     <second>0</second>
+     <year>2023</year>
+     <month>12</month>
+     <day>14</day>
+    </datetime>
+   </property>
+   <property name="minimumDate">
+    <date>
+     <year>2023</year>
+     <month>12</month>
+     <day>2</day>
+    </date>
    </property>
    <property name="displayFormat">
     <string>yyyy-MM-dd</string>
    </property>
+   <property name="calendarPopup">
+    <bool>true</bool>
+   </property>
   </widget>
-  <!-- Botón: Guardar Cambios -->
   <widget class="QPushButton" name="btnGuardarCambios">
    <property name="geometry">
     <rect>
@@ -221,7 +234,6 @@
     <string>Guardar Cambios</string>
    </property>
   </widget>
-  <!-- Botón: Cancelar -->
   <widget class="QPushButton" name="btnCancelar">
    <property name="geometry">
     <rect>

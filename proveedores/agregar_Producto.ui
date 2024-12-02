@@ -52,17 +52,17 @@
     <string>Descripción:</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEditDescripcionProducto">
+  <widget class="QTextEdit" name="textEditDescripcion">
    <property name="geometry">
     <rect>
      <x>180</x>
      <y>130</y>
      <width>500</width>
-     <height>30</height>
+     <height>80</height>
     </rect>
    </property>
    <property name="placeholderText">
-    <string>Descripción del producto</string>
+    <string>Descripción del producto...</string>
    </property>
   </widget>
   <widget class="QLabel" name="labelProveedor">
@@ -95,9 +95,9 @@
    <property name="geometry">
     <rect>
      <x>50</x>
-     <y>180</y>
+     <y>230</y>
      <width>121</width>
-     <height>20</height>
+     <height>21</height>
     </rect>
    </property>
    <property name="text">
@@ -108,7 +108,7 @@
    <property name="geometry">
     <rect>
      <x>180</x>
-     <y>180</y>
+     <y>230</y>
      <width>500</width>
      <height>30</height>
     </rect>
@@ -121,7 +121,7 @@
    <property name="geometry">
     <rect>
      <x>50</x>
-     <y>230</y>
+     <y>280</y>
      <width>121</width>
      <height>20</height>
     </rect>
@@ -134,7 +134,7 @@
    <property name="geometry">
     <rect>
      <x>180</x>
-     <y>230</y>
+     <y>280</y>
      <width>500</width>
      <height>30</height>
     </rect>
@@ -147,7 +147,7 @@
    <property name="geometry">
     <rect>
      <x>50</x>
-     <y>280</y>
+     <y>330</y>
      <width>121</width>
      <height>20</height>
     </rect>
@@ -160,7 +160,7 @@
    <property name="geometry">
     <rect>
      <x>180</x>
-     <y>280</y>
+     <y>330</y>
      <width>500</width>
      <height>30</height>
     </rect>
@@ -182,7 +182,7 @@
    <property name="geometry">
     <rect>
      <x>50</x>
-     <y>330</y>
+     <y>380</y>
      <width>121</width>
      <height>20</height>
     </rect>
@@ -195,14 +195,14 @@
    <property name="geometry">
     <rect>
      <x>180</x>
-     <y>330</y>
+     <y>380</y>
      <width>500</width>
      <height>30</height>
     </rect>
    </property>
    <property name="dateTime">
     <datetime>
-     <hour>6</hour>
+     <hour>0</hour>
      <minute>0</minute>
      <second>0</second>
      <year>2024</year>
@@ -212,7 +212,7 @@
    </property>
    <property name="minimumDateTime">
     <datetime>
-     <hour>6</hour>
+     <hour>0</hour>
      <minute>0</minute>
      <second>0</second>
      <year>2024</year>
@@ -231,7 +231,7 @@
    <property name="geometry">
     <rect>
      <x>150</x>
-     <y>400</y>
+     <y>450</y>
      <width>200</width>
      <height>50</height>
     </rect>
@@ -244,7 +244,7 @@
    <property name="geometry">
     <rect>
      <x>450</x>
-     <y>400</y>
+     <y>450</y>
      <width>200</width>
      <height>50</height>
     </rect>

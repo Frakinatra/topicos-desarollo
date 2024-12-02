@@ -4,6 +4,8 @@ from PyQt5.uic import loadUi
 import os
 from proveedores.agregar_Proveedor import AgregarProveedorWindow
 from proveedores.agregar_Producto import AgregarProductoWindow
+from proveedores.con_Edi_Eli_Productos import GestionarProductosWindow
+from proveedores.con_Edi_Eli_Proveedor import GestionarProveedoresWindow
 
 class ProveedorPrincipal(QMainWindow):
     closed = pyqtSignal()
@@ -46,24 +48,3 @@ class ProveedorPrincipal(QMainWindow):
         self.ventana = GestionarProductosWindow()
         self.ventana.closed.connect(self.show)
         self.ventana.show()
-
-"""class GestionarProveedoresWindow(BaseWindow):
-    def __init__(self):
-        super().__init__()
-        # Cargar la ruta completa del archivo UI
-        ui_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'con_Edi_Eli_Proveedor.ui')
-        loadUi(ui_path, self)
-
-class AgregarProductoWindow(BaseWindow):
-    def __init__(self):
-        super().__init__()
-        # Cargar la ruta completa del archivo UI
-        ui_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'agregar_Producto.ui')
-        loadUi(ui_path, self)
-
-class GestionarProductosWindow(BaseWindow):
-    def __init__(self):
-        super().__init__()
-        # Cargar la ruta completa del archivo UI
-        ui_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'con_Edi_Eli_Productos.ui')
-        loadUi(ui_path, self)"""

@@ -44,6 +44,9 @@
    </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_5">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="geometry">
     <rect>
      <x>160</x>
@@ -51,6 +54,12 @@
      <width>401</width>
      <height>321</height>
     </rect>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
+   </property>
+   <property name="acceptDrops">
+    <bool>false</bool>
    </property>
    <property name="styleSheet">
     <string notr="true">QLineEdit {
@@ -60,6 +69,9 @@
     padding: 5px;
 }
 </string>
+   </property>
+   <property name="frame">
+    <bool>false</bool>
    </property>
   </widget>
   <widget class="QLabel" name="label_7">
@@ -153,11 +165,6 @@
             border-radius: 15px;
             background-color: #f0f0f0;  /* Fondo gris claro */
             color: #333333;             /* Color de texto gris oscuro */
-            padding-left: 10px;         /* Espacio interior */
-        }
-        QLineEdit:focus {
-            border: 2px solid #007AFF;  /* Cambio de borde al seleccionar */
-            background-color: #ffffff;  /* Fondo blanco al seleccionar */
         }</string>
    </property>
    <property name="text">
@@ -174,6 +181,9 @@
    </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_4">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
    <property name="geometry">
     <rect>
      <x>290</x>
@@ -182,21 +192,25 @@
      <height>31</height>
     </rect>
    </property>
+   <property name="mouseTracking">
+    <bool>true</bool>
+   </property>
+   <property name="acceptDrops">
+    <bool>true</bool>
+   </property>
    <property name="styleSheet">
     <string notr="true">QLineEdit {
             border: 2px solid #4A90E2;   /* Borde azul */
             border-radius: 15px;
             background-color: #f0f0f0;  /* Fondo gris claro */
             color: #333333;             /* Color de texto gris oscuro */
-            padding-left: 10px;         /* Espacio interior */
-        }
-        QLineEdit:focus {
-            border: 2px solid #007AFF;  /* Cambio de borde al seleccionar */
-            background-color: #ffffff;  /* Fondo blanco al seleccionar */
         }</string>
    </property>
    <property name="text">
     <string/>
+   </property>
+   <property name="frame">
+    <bool>true</bool>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>

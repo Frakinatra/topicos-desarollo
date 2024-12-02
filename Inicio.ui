@@ -36,13 +36,13 @@
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton{
-	font:75 8pt &quot;MS Shell Dlg 2&quot;;
-	background-color: rgb(255, 255, 255);
+    font:75 8pt &quot;MS Shell Dlg 2&quot;;
+    background-color: rgb(255, 255, 255);
 }
 
 QPushButton:hover{
-	font:75 9pt &quot;MS Shell Dlg 2&quot;;
-	background-color: rgb(227, 227, 227);
+    font:75 9pt &quot;MS Shell Dlg 2&quot;;
+    background-color: rgb(227, 227, 227);
 }
 
 </string>
@@ -62,19 +62,45 @@ QPushButton:hover{
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton{
-	font:75 8pt &quot;MS Shell Dlg 2&quot;;
-	background-color: rgb(255, 255, 255);
+    font:75 8pt &quot;MS Shell Dlg 2&quot;;
+    background-color: rgb(255, 255, 255);
 }
 
 QPushButton:hover{
-	font:75 9pt &quot;MS Shell Dlg 2&quot;;
-	background-color: rgb(227, 227, 227);
+    font:75 9pt &quot;MS Shell Dlg 2&quot;;
+    background-color: rgb(227, 227, 227);
 }
 
 </string>
     </property>
     <property name="text">
      <string>PushButton</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_3">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>50</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+    font:75 8pt &quot;MS Shell Dlg 2&quot;;
+    background-color: rgb(255, 255, 255);
+}
+
+QPushButton:hover{
+    font:75 9pt &quot;MS Shell Dlg 2&quot;;
+    background-color: rgb(227, 227, 227);
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string>Proveedor</string>
     </property>
    </widget>
   </widget>

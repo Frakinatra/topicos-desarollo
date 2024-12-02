@@ -2,14 +2,17 @@ import sys
 import mysql.connector
 from PyQt5 import QtWidgets, uic
 from PyQt5.QtWidgets import QMessageBox
-from inicio import InicioApp  # Importamos InicioApp desde inicio.py
 
 class LoginApp(QtWidgets.QMainWindow):
     def __init__(self):
         super().__init__()
-        uic.loadUi('proyecto.ui', self)
-
-        self.pushButton.clicked.connect(self.validar_login)
+        uic.loadUi('proyecto.ui', self) 
+       
+        self.pushButton_2.clicked.connect(self.validar_login)
+        
+        # Conectar Enter (returnPressed) a validar_login
+        self.lineEdit_4.returnPressed.connect(self.validar_login)  # Usuario
+        self.lineEdit_3.returnPressed.connect(self.validar_login)  # Contraseña
 
     def conectar(self):
         try:
@@ -25,9 +28,9 @@ class LoginApp(QtWidgets.QMainWindow):
             return None
 
     def validar_login(self):
-        username = self.lineEdit.text().strip()
-        password = self.lineEdit_2.text().strip()
-
+        username = self.lineEdit_4.text().strip()   # Nombre corregido
+        password = self.lineEdit_3.text().strip()   # Contraseña corregida
+        
         conexion = self.conectar()
         if conexion:
             try:
@@ -38,7 +41,7 @@ class LoginApp(QtWidgets.QMainWindow):
 
                 if user:
                     QMessageBox.information(self, "Éxito", f"¡Bienvenido, {username}!")
-                    self.abrir_inicio()
+                    self.abrir_inicio()  
                 else:
                     QMessageBox.warning(self, "Error", "Usuario o contraseña incorrectos.")
             except mysql.connector.Error as err:
@@ -48,9 +51,14 @@ class LoginApp(QtWidgets.QMainWindow):
                 conexion.close()
 
     def abrir_inicio(self):
-        self.ventana_inicio = InicioApp()
+        self.ventana_inicio = InicioApp()  
         self.ventana_inicio.show()
         self.close()
+
+class InicioApp(QtWidgets.QMainWindow):
+    def __init__(self):
+        super().__init__()
+        uic.loadUi('inicio.ui', self)  
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)

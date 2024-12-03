@@ -49,6 +49,15 @@ CREATE TABLE proveedores (
     PRIMARY KEY (id)
 );
 
+CREATE TABLE carritos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    usuario_id INT NOT NULL,  -- Relación con la tabla de usuarios
+    producto_id INT NOT NULL,  -- Relación con la tabla de productos
+    cantidad INT DEFAULT 1,  -- Cantidad de este producto
+    FOREIGN KEY (usuario_id) REFERENCES users(id),
+    FOREIGN KEY (producto_id) REFERENCES productos(id)
+);
+
 INSERT INTO proveedores (nombre, vinculacion, correo, telefono, direccion, fecha_registro) VALUES
 ('Nike', 'Ventas', 'nike@correo.com', '1234567890', 'Av. Principal 123, CDMX, México', '2024-11-30'),
 ('Adidas', 'Ventas', 'adidas@correo.com', '9876543210', 'Calle Secundaria 456, Monterrey, México', '2024-11-30'),

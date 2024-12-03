@@ -1,5 +1,6 @@
 import sys
 import mysql.connector
+import os
 from PyQt5 import QtWidgets, uic
 from PyQt5.QtWidgets import QMessageBox
 from inicio import InicioApp
@@ -7,15 +8,21 @@ from inicio import InicioApp
 class LoginApp(QtWidgets.QMainWindow):
     def __init__(self):
         super().__init__()
-        uic.loadUi('proyecto.ui', self) 
+        ruta_ui = os.path.join(os.path.dirname(__file__), "proyecto.ui")  # Ruta dinámica al archivo UI
+        if not os.path.exists(ruta_ui):
+            QMessageBox.critical(self, "Error", f"No se encontró el archivo UI en: {ruta_ui}")
+            sys.exit(1)
+        uic.loadUi(ruta_ui, self)
        
+        # Conectar el botón y la tecla Enter a la función de validación
         self.pushButton_2.clicked.connect(self.validar_login)
-        
-        # Conectar Enter (returnPressed) a validar_login
         self.lineEdit_4.returnPressed.connect(self.validar_login)  # Usuario
         self.lineEdit_3.returnPressed.connect(self.validar_login)  # Contraseña
 
+        self.usuario_id = None  # Almacena el ID del usuario logueado
+
     def conectar(self):
+        """Establece una conexión con la base de datos"""
         try:
             conexion = mysql.connector.connect(
                 host="localhost",
@@ -29,20 +36,22 @@ class LoginApp(QtWidgets.QMainWindow):
             return None
 
     def validar_login(self):
-        username = self.lineEdit_4.text().strip()   # Nombre corregido
-        password = self.lineEdit_3.text().strip()   # Contraseña corregida
+        """Valida las credenciales ingresadas"""
+        username = self.lineEdit_4.text().strip()   # Captura del usuario
+        password = self.lineEdit_3.text().strip()   # Captura de la contraseña
         
         conexion = self.conectar()
         if conexion:
             try:
                 cursor = conexion.cursor()
-                query = "SELECT * FROM users WHERE username = %s AND password = %s"
+                query = "SELECT id, username FROM users WHERE username = %s AND password = %s"
                 cursor.execute(query, (username, password))
                 user = cursor.fetchone()
 
                 if user:
-                    QMessageBox.information(self, "Éxito", f"¡Bienvenido, {username}!")
-                    self.abrir_inicio()  
+                    self.usuario_id = user[0]  # Almacena el ID del usuario
+                    QMessageBox.information(self, "Éxito", f"¡Bienvenido, {user[1]}!")
+                    self.abrir_inicio()
                 else:
                     QMessageBox.warning(self, "Error", "Usuario o contraseña incorrectos.")
             except mysql.connector.Error as err:
@@ -52,7 +61,7 @@ class LoginApp(QtWidgets.QMainWindow):
                 conexion.close()
 
     def abrir_inicio(self):
-        self.ventana_inicio = InicioApp()  
+        self.ventana_inicio = InicioApp(self.usuario_id)  
         self.ventana_inicio.show()
         self.close()
 

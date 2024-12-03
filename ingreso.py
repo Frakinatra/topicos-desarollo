@@ -10,7 +10,7 @@ class LoginApp(QtWidgets.QMainWindow):
     def __init__(self):
         super().__init__()
 
-        # Ruta dinámica al archivo UI
+        # Ruta dinámica al archivo UI 
         ruta_ui = os.path.join(os.path.dirname(__file__), "proyecto.ui")
         if not os.path.exists(ruta_ui):
             QMessageBox.critical(self, "Error", f"No se encontró el archivo UI en: {ruta_ui}")

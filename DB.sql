@@ -147,3 +147,15 @@ END$$
 DELIMITER ;
 
 
+CREATE TABLE pedidos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    usuario_id INT NOT NULL,
+    fecha DATETIME DEFAULT CURRENT_TIMESTAMP,
+    total DECIMAL(10, 2) NOT NULL,
+    FOREIGN KEY (usuario_id) REFERENCES users(id)
+);
+
+ALTER TABLE pedidos ADD COLUMN estatus ENUM('pendiente', 'completado', 'cancelado') DEFAULT 'pendiente';
+
+ALTER TABLE carritos ADD COLUMN id_pedido INT;
+ALTER TABLE carritos ADD CONSTRAINT fk_carritos_pedidos FOREIGN KEY (id_pedido) REFERENCES pedidos(id);

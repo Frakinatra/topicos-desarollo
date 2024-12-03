@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1079</width>
+    <height>981</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1000</width>
+    <height>720</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Crear Pedido</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="minimumSize">
+    <size>
+     <width>1000</width>
+     <height>720</height>
+    </size>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QFrame" name="frame">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLabel" name="labelTitulo">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>10</y>
+         <width>1071</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 75 20pt &quot;Consolas&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Creacion de Pedido</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QFrame" name="frame_2">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>50</y>
+         <width>1081</width>
+         <height>221</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QLabel" name="labelProveedor">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>20</y>
+          <width>171</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 12pt &quot;Consolas&quot;;</string>
+        </property>
+        <property name="text">
+         <string>Proveedor:</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="comboProveedores">
+        <property name="geometry">
+         <rect>
+          <x>300</x>
+          <y>20</y>
+          <width>331</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 255, 255);
+border-radius: 30;</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>Opcion 1</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Opcion 2</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Opcion 3</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Opcion 4</string>
+         </property>
+        </item>
+       </widget>
+       <widget class="QLabel" name="labelClave">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>70</y>
+          <width>251</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 12pt &quot;Consolas&quot;;</string>
+        </property>
+        <property name="text">
+         <string>Clave del Producto: </string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="txt_ClaveProducto">
+        <property name="geometry">
+         <rect>
+          <x>300</x>
+          <y>70</y>
+          <width>331</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 255, 255);</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btn_Buscar">
+        <property name="geometry">
+         <rect>
+          <x>660</x>
+          <y>70</y>
+          <width>141</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(11, 129, 255);
+font: 12pt &quot;Consolas&quot;;
+color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="text">
+         <string>BUSCAR</string>
+        </property>
+       </widget>
+       <widget class="QTableWidget" name="tableWidget_2">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>120</y>
+          <width>1031</width>
+          <height>101</height>
+         </rect>
+        </property>
+        <attribute name="horizontalHeaderDefaultSectionSize">
+         <number>200</number>
+        </attribute>
+        <column>
+         <property name="text">
+          <string>ID</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>NOMBRE</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>CATEGORIA</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>DESCRIPCION</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>PRECIO</string>
+         </property>
+        </column>
+       </widget>
+      </widget>
+      <widget class="QFrame" name="frame_3">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>280</y>
+         <width>1081</width>
+         <height>211</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+      </widget>
+      <widget class="QFrame" name="frame_4">
+       <property name="geometry">
+        <rect>
+         <x>-10</x>
+         <y>590</y>
+         <width>1081</width>
+         <height>381</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+
+QLabel{
+	font: 10pt &quot;Consolas&quot;;
+}
+
+QLineEdit{
+	font: 10pt &quot;Consolas&quot;;
+	background-color: rgb(255, 255, 255);
+}
+
+QPushButton{
+	font: 10pt &quot;Consolas&quot;;
+	color: rgb(255, 255, 255);
+	background-color: rgb(11, 129, 255);
+}
+
+QTextEdit{
+	background-color: rgb(255, 255, 255);
+	font: 10pt &quot;Consolas&quot;;
+}</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QLabel" name="labelPedido">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>20</y>
+          <width>81</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Pedido:</string>
+        </property>
+       </widget>
+       <widget class="QTableWidget" name="tableWidget">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>60</y>
+          <width>1031</width>
+          <height>201</height>
+         </rect>
+        </property>
+        <attribute name="horizontalHeaderDefaultSectionSize">
+         <number>200</number>
+        </attribute>
+        <column>
+         <property name="text">
+          <string>PRODUCTO</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>CANTIDAD</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>COSTO UNITARIO</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>SUBTOTAL</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>ELIMINAR</string>
+         </property>
+        </column>
+       </widget>
+       <widget class="QLabel" name="labelTotal">
+        <property name="geometry">
+         <rect>
+          <x>724</x>
+          <y>280</y>
+          <width>331</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>TOTAL: $ 0.0</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btn_AddPedido">
+        <property name="geometry">
+         <rect>
+          <x>730</x>
+          <y>320</y>
+          <width>181</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>AGREGAR PEDIDO</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btn_Cancelar">
+        <property name="geometry">
+         <rect>
+          <x>930</x>
+          <y>320</y>
+          <width>131</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 0, 0);</string>
+        </property>
+        <property name="text">
+         <string>CANCELAR</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QGroupBox" name="groupBox">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>290</y>
+         <width>1061</width>
+         <height>301</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QGroupBox{
+	font: 12pt &quot;Consolas&quot;;
+	border-color: rgb(0, 0, 0);
+	border-width: 10;
+}
+
+QLabel{
+	font: 10pt &quot;Consolas&quot;;
+}
+
+QLineEdit{
+	font: 10pt &quot;Consolas&quot;;
+	background-color: rgb(255, 255, 255);
+}
+
+QSpinBox{
+	background-color: rgb(255, 255, 255);
+	font: 10pt &quot;Consolas&quot;;	
+}
+
+QPushButton{
+	font: 10pt &quot;Consolas&quot;;
+	color: rgb(255, 255, 255);
+	background-color: rgb(11, 129, 255);
+}
+
+QTextEdit{
+	background-color: rgb(255, 255, 255);
+	font: 10pt &quot;Consolas&quot;;
+}</string>
+       </property>
+       <property name="title">
+        <string>DETALLES DEL PRODUCTO</string>
+       </property>
+       <widget class="QLabel" name="labelNombre">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>40</y>
+          <width>101</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Nombre:</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="txt_Nombre">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>40</y>
+          <width>371</width>
+          <height>31</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="labelPrecio">
+        <property name="geometry">
+         <rect>
+          <x>520</x>
+          <y>40</y>
+          <width>121</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Precio: $</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="txt_precio">
+        <property name="geometry">
+         <rect>
+          <x>650</x>
+          <y>40</y>
+          <width>131</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>0.0</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="labelCantidad">
+        <property name="geometry">
+         <rect>
+          <x>800</x>
+          <y>40</y>
+          <width>121</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Cantidad:</string>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="spinCantidad">
+        <property name="geometry">
+         <rect>
+          <x>940</x>
+          <y>40</y>
+          <width>81</width>
+          <height>31</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="labelDescripcion">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>90</y>
+          <width>221</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Descripcion: </string>
+        </property>
+       </widget>
+       <widget class="QTextEdit" name="txt_descripcion">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>130</y>
+          <width>1021</width>
+          <height>91</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 255, 255);</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btn_addProducto">
+        <property name="geometry">
+         <rect>
+          <x>800</x>
+          <y>240</y>
+          <width>241</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>AGREGAR PRODUCTO</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

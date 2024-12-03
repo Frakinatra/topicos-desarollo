@@ -60,7 +60,7 @@
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_4">
+  <widget class="QPushButton" name="pushButton_Proveedor">
    <property name="geometry">
     <rect>
      <x>470</x>
@@ -105,7 +105,7 @@ QPushButton:hover {
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_5">
+  <widget class="QPushButton" name="pushButton_Usuarios">
    <property name="geometry">
     <rect>
      <x>70</x>
@@ -133,7 +133,7 @@ QPushButton:hover {
     <string>Usuario</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_6">
+  <widget class="QPushButton" name="pushButton_Comprar">
    <property name="geometry">
     <rect>
      <x>280</x>
@@ -157,7 +157,7 @@ QPushButton:hover {
 </string>
    </property>
    <property name="text">
-    <string>Productos</string>
+    <string>Comprar Producto</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_6">

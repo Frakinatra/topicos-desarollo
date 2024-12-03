@@ -2,6 +2,7 @@ import sys
 import mysql.connector
 from PyQt5 import QtWidgets, uic
 from PyQt5.QtWidgets import QMessageBox
+from inicio import InicioApp
 
 class LoginApp(QtWidgets.QMainWindow):
     def __init__(self):
@@ -54,11 +55,6 @@ class LoginApp(QtWidgets.QMainWindow):
         self.ventana_inicio = InicioApp()  
         self.ventana_inicio.show()
         self.close()
-
-class InicioApp(QtWidgets.QMainWindow):
-    def __init__(self):
-        super().__init__()
-        uic.loadUi('inicio.ui', self)  
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)

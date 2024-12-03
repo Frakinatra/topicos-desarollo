@@ -1,8 +1,9 @@
 import os
 from PyQt5.QtWidgets import QMainWindow, QMessageBox, QTableWidgetItem, QPushButton, QHBoxLayout, QWidget
-from PyQt5.QtCore import pyqtSignal
+from PyQt5.QtCore import pyqtSignal, Qt
 from PyQt5.uic import loadUi
 import mysql.connector
+from PyQt5.QtGui import QFont
 from proveedores.editar_Proveedor import EditarProveedorWindow
 
 class GestionarProveedoresWindow(QMainWindow):
@@ -14,12 +15,19 @@ class GestionarProveedoresWindow(QMainWindow):
         ui_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'con_Edi_Eli_Proveedor.ui')
         loadUi(ui_path, self)
 
+        # Hacer que el QLabel actúe como botón
+        self.regresar.setAttribute(Qt.WA_Hover, True)
+        self.regresar.mousePressEvent = self.volver_anterior
+        
         # Cargar los datos iniciales
         self.cargar_proveedores()
 
     def closeEvent(self, event):
         self.closed.emit()
         event.accept()
+
+    def volver_anterior(self, event):
+        self.close()
 
     def conectar(self):
         """Establecer conexión con la base de datos."""
@@ -64,9 +72,33 @@ class GestionarProveedoresWindow(QMainWindow):
 
                     # Agregar botones de acciones
                     btn_editar = QPushButton("Editar")
+                    # Establecer la fuente del botón
+                    font = QFont("Arial Rounded MT Bold", 11)  # Fuente Arial Rounded MT Bold, tamaño 12
+                    btn_editar.setFont(font)
+                    btn_editar.setStyleSheet("""
+                        QPushButton {
+                            background-color: #ADD8E6; /* Azul pastel */
+                            color: #000000; /* Color del texto: negro */
+                        }
+                        QPushButton:hover {
+                            background-color: #87CEEB; /* Azul pastel más claro al pasar el cursor */
+                        }
+                    """)
                     btn_editar.clicked.connect(lambda _, prov_id=proveedor[0]: self.editar_proveedor(prov_id))
 
                     btn_eliminar = QPushButton("Eliminar")
+                    # Establecer la fuente del botón
+                    font = QFont("Arial Rounded MT Bold", 11)  # Fuente Arial Rounded MT Bold, tamaño 12
+                    btn_eliminar.setFont(font)
+                    btn_eliminar.setStyleSheet("""
+                        QPushButton {
+                            background-color: #FFB6C1; /* Rosa pastel */
+                            color: #000000; /* Color del texto: negro */
+                        }
+                        QPushButton:hover {
+                            background-color: #FF69B4; /* Rosa más brillante al pasar el cursor */
+                        }
+                    """)
                     btn_eliminar.clicked.connect(lambda _, prov_id=proveedor[0]: self.eliminar_proveedor(prov_id))
 
                     action_layout = QHBoxLayout()

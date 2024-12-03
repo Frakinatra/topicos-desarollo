@@ -1,6 +1,6 @@
 import mysql.connector
 from PyQt5.QtWidgets import QMainWindow, QMessageBox
-from PyQt5.QtCore import pyqtSignal
+from PyQt5.QtCore import pyqtSignal, Qt
 from PyQt5.uic import loadUi
 import os
 import re
@@ -17,6 +17,10 @@ class EditarProveedorWindow(QMainWindow):
         self.proveedor_id = proveedor_id  # ID del proveedor a editar
         self.btnGuardarCambios.clicked.connect(self.guardar_cambios)
         self.btnCancelar.clicked.connect(self.close)
+        
+        # Hacer que el QLabel actúe como botón
+        self.regresar.setAttribute(Qt.WA_Hover, True)
+        self.regresar.mousePressEvent = self.volver_anterior
 
         # Cargar datos del proveedor en los campos de la interfaz
         self.cargar_datos_proveedor()
@@ -24,6 +28,9 @@ class EditarProveedorWindow(QMainWindow):
     def closeEvent(self, event):
         self.closed.emit()
         event.accept()
+
+    def volver_anterior(self, event):
+        self.close()
 
     def conectar(self):
         try:

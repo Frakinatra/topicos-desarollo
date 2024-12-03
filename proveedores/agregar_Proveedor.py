@@ -1,6 +1,6 @@
 import mysql.connector
 from PyQt5.QtWidgets import QMainWindow, QMessageBox
-from PyQt5.QtCore import pyqtSignal
+from PyQt5.QtCore import pyqtSignal, Qt
 from PyQt5.uic import loadUi
 import os
 from datetime import datetime
@@ -17,10 +17,17 @@ class AgregarProveedorWindow(QMainWindow):
 
         self.btnGuardar.clicked.connect(self.guardar_proveedor)
         self.btnCancelar.clicked.connect(self.close)
+        
+        # Hacer que el QLabel actúe como botón
+        self.regresar.setAttribute(Qt.WA_Hover, True)
+        self.regresar.mousePressEvent = self.volver_anterior
 
     def closeEvent(self, event):
         self.closed.emit()
         event.accept()  # Aceptar el evento de cierre para que la ventana se cierre
+
+    def volver_anterior(self, event):
+        self.close()
 
     def conectar(self):
         try:

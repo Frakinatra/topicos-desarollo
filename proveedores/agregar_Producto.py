@@ -1,6 +1,6 @@
 import mysql.connector
 from PyQt5.QtWidgets import QMainWindow, QMessageBox
-from PyQt5.QtCore import pyqtSignal
+from PyQt5.QtCore import pyqtSignal, Qt
 from PyQt5.uic import loadUi
 import os
 from datetime import datetime
@@ -17,6 +17,10 @@ class AgregarProductoWindow(QMainWindow):
         # Conectar botones
         self.btnGuardarProducto.clicked.connect(self.guardar_producto)
         self.btnCancelar.clicked.connect(self.close)
+        
+        # Hacer que el QLabel actúe como botón
+        self.regresar.setAttribute(Qt.WA_Hover, True)
+        self.regresar.mousePressEvent = self.volver_anterior
 
         # Cargar proveedores y categorías en los combo boxes
         self.cargar_datos_combobox()
@@ -24,6 +28,9 @@ class AgregarProductoWindow(QMainWindow):
     def closeEvent(self, event):
         self.closed.emit()
         event.accept()
+
+    def volver_anterior(self, event):
+        self.close()
 
     def conectar(self):
         try:

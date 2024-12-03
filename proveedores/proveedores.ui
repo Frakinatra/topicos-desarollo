@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>ProveedorMainWindow</class>
  <widget class="QWidget" name="ProveedorMainWindow">
@@ -12,57 +13,198 @@
   <property name="windowTitle">
    <string>Módulo de Proveedores</string>
   </property>
-  <widget class="QPushButton" name="btnAgregarProveedor">
+  <widget class="QFrame" name="frame">
    <property name="geometry">
     <rect>
-     <x>150</x>
-     <y>150</y>
-     <width>500</width>
-     <height>50</height>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>600</height>
     </rect>
    </property>
-   <property name="text">
-    <string>Agregar Proveedor</string>
+   <property name="font">
+    <font>
+     <family>Arial Rounded MT Bold</family>
+     <pointsize>16</pointsize>
+    </font>
    </property>
-  </widget>
-  <widget class="QPushButton" name="btnGestionarProveedores">
-   <property name="geometry">
-    <rect>
-     <x>150</x>
-     <y>230</y>
-     <width>500</width>
-     <height>50</height>
-    </rect>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(2, 2, 2);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(255, 0, 0, 255), stop:0.339795 rgba(255, 0, 0, 255), stop:0.339799 rgba(255, 255, 255, 255), stop:0.662444 rgba(255, 255, 255, 255), stop:0.662469 rgba(0, 0, 255, 255), stop:1 rgba(0, 0, 255, 255));
+background-color: rgb(144, 167, 200);</string>
    </property>
-   <property name="text">
-    <string>Consultar/Editar/Eliminar Proveedores</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="btnAgregarProducto">
-   <property name="geometry">
-    <rect>
-     <x>150</x>
-     <y>310</y>
-     <width>500</width>
-     <height>50</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Agregar Producto a un Proveedor</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="btnGestionarProductos">
-   <property name="geometry">
-    <rect>
-     <x>150</x>
-     <y>390</y>
-     <width>500</width>
-     <height>50</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Consultar/Editar/Eliminar Productos</string>
-   </property>
+   <widget class="QPushButton" name="btnAgregarProveedor">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>120</y>
+      <width>500</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial Rounded MT Bold</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+    font-family: &quot;Arial Rounded MT Bold&quot;;
+    font-size: 16pt;
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    border: 1px solid rgb(144, 167, 200);
+}
+
+QPushButton:hover{
+    background-color: rgb(227, 227, 227);
+    border: 1px solid rgb(120, 140, 180);
+}</string>
+    </property>
+    <property name="text">
+     <string>Agregar Proveedor</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnGestionarProveedores">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>230</y>
+      <width>500</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial Rounded MT Bold</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+    font-family: &quot;Arial Rounded MT Bold&quot;;
+    font-size: 16pt;
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    border: 1px solid rgb(144, 167, 200);
+}
+
+QPushButton:hover{
+    background-color: rgb(227, 227, 227);
+    border: 1px solid rgb(120, 140, 180);
+}</string>
+    </property>
+    <property name="text">
+     <string>Consultar/Editar/Eliminar Proveedores</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnAgregarProducto">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>340</y>
+      <width>500</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial Rounded MT Bold</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+    font-family: &quot;Arial Rounded MT Bold&quot;;
+    font-size: 16pt;
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    border: 1px solid rgb(144, 167, 200);
+}
+
+QPushButton:hover{
+    background-color: rgb(227, 227, 227);
+    border: 1px solid rgb(120, 140, 180);
+}</string>
+    </property>
+    <property name="text">
+     <string>Agregar Producto a un Proveedor</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnGestionarProductos">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>450</y>
+      <width>500</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial Rounded MT Bold</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+    font-family: &quot;Arial Rounded MT Bold&quot;;
+    font-size: 16pt;
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    border: 1px solid rgb(144, 167, 200);
+}
+
+QPushButton:hover{
+    background-color: rgb(227, 227, 227);
+    border: 1px solid rgb(120, 140, 180);
+}</string>
+    </property>
+    <property name="text">
+     <string>Consultar/Editar/Eliminar Productos</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="regresar">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>90</width>
+      <height>90</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial Rounded MT Bold</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string>
+        QLabel {
+            font-family: &quot;Arial Rounded MT Bold&quot;;
+            font-size: 16pt;
+            border-radius: 10px;
+        }
+        QLabel:hover {
+            background-color: #ccc;
+        }
+        QLabel:pressed {
+            background-color: #aaa;
+        }
+     </string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../flecha.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
   </widget>
  </widget>
  <resources/>

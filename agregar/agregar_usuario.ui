@@ -116,7 +116,7 @@ background-color: rgb(144, 167, 200);</string>
     <widget class="QPushButton" name="btnGuardar">
      <property name="geometry">
       <rect>
-       <x>160</x>
+       <x>440</x>
        <y>340</y>
        <width>171</width>
        <height>31</height>
@@ -144,42 +144,11 @@ QPushButton:hover{
       <string>Guardar</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="btnCancelar">
-     <property name="geometry">
-      <rect>
-       <x>450</x>
-       <y>340</y>
-       <width>171</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Arial Rounded MT Bold</family>
-       <pointsize>14</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton{
-    background-color: rgb(255, 255, 255);
-    border-radius: 15px;
-    border: 1px solid rgb(144, 167, 200);
-}
-
-QPushButton:hover{
-    background-color: rgb(227, 227, 227);
-    border: 1px solid rgb(120, 140, 180);
-}</string>
-     </property>
-     <property name="text">
-      <string>Cancelar</string>
-     </property>
-    </widget>
     <widget class="QLabel" name="regresar">
      <property name="geometry">
       <rect>
-       <x>40</x>
-       <y>40</y>
+       <x>190</x>
+       <y>320</y>
        <width>71</width>
        <height>71</height>
       </rect>

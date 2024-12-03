@@ -29,7 +29,7 @@
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>../../Downloads/tienda.jpeg</pixmap>
+    <pixmap>tienda.jpeg</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
@@ -54,7 +54,7 @@
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>../../Downloads/proveedor-removebg-preview.png</pixmap>
+    <pixmap>proveedor-removebg-preview.png</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
@@ -99,7 +99,7 @@ QPushButton:hover {
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>../../Downloads/usuario-removebg-preview.png</pixmap>
+    <pixmap>usuario-removebg-preview.png</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
@@ -173,7 +173,7 @@ QPushButton:hover {
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>../../Downloads/tenis.png</pixmap>
+    <pixmap>tenis.png</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>

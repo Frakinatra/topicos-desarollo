@@ -119,3 +119,31 @@ JOIN
     proveedores pr ON p.proveedor_id = pr.id
 WHERE 
     c.nombre_categoria = 'Running';
+
+DELIMITER $$
+
+CREATE PROCEDURE agregar_user(
+    IN p_username VARCHAR(50),
+    IN p_email VARCHAR(100),
+    IN p_password VARCHAR(100),
+    IN p_nombre VARCHAR(50),
+    IN p_apellido VARCHAR(50)
+)
+BEGIN
+    DECLARE user_id INT;
+
+    -- Insertar en la tabla 'users'
+    INSERT INTO users (username, email, password)
+    VALUES (p_username, p_email, p_password);
+    
+    -- Obtener el ID del usuario recién insertado
+    SET user_id = LAST_INSERT_ID();
+    
+    -- Insertar en la tabla 'user_profiles' relacionada
+    INSERT INTO user_profiles (user_id, nombre, apellido, correo, password)
+    VALUES (user_id, p_nombre, p_apellido, p_email, p_password);
+END$$
+
+DELIMITER ;
+
+

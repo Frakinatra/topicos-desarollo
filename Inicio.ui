@@ -136,9 +136,9 @@ QPushButton:hover {
   <widget class="QPushButton" name="pushButton_Comprar">
    <property name="geometry">
     <rect>
-     <x>280</x>
+     <x>270</x>
      <y>300</y>
-     <width>141</width>
+     <width>161</width>
      <height>31</height>
     </rect>
    </property>

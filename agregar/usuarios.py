@@ -1,13 +1,22 @@
 from PyQt5 import QtWidgets, uic
 from PyQt5.QtWidgets import QMessageBox
 import sys
-sys.path.append("C:/Users/merti/Desktop/Proyecto t5/agregar")  # Ruta donde se encuentra conectar_bd.py
-from conectar_bd import conectar_bd
+from agregar.conectar_bd import conectar_bd
+import sys
+import os
 
 class AgregarUsuario(QtWidgets.QMainWindow):
     def __init__(self, ventana_login):
         super().__init__()
-        uic.loadUi("C:/Users/merti/Desktop/Proyecto t5/agregar/agregar_usuario.ui", self)  # Ruta completa
+
+        # Ruta relativa al archivo .ui
+        ruta_ui = os.path.join(os.path.dirname(__file__), "agregar_usuario.ui")  # Asegúrate de que la ruta esté correcta
+
+        if not os.path.exists(ruta_ui):
+            QMessageBox.critical(self, "Error", f"No se encontró el archivo UI en: {ruta_ui}")
+            sys.exit(1)
+
+        uic.loadUi(ruta_ui, self)  # Ruta completa al archivo .ui, pero relativa al directorio actual
 
         # Guardar la referencia de la ventana de login
         self.ventana_login = ventana_login
@@ -71,6 +80,5 @@ if __name__ == "__main__":
     ventana_agregar = AgregarUsuario(None)  # Aquí se pasa None porque no tienes acceso a LoginApp en este script
     ventana_agregar.show()  # Usamos show() en lugar de exec_()
     sys.exit(app.exec_())
-
 
 
